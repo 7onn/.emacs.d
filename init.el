@@ -20,7 +20,7 @@
 (load "packages")
 (load "editor")
 (load "ui")
-(load "ligature")
+;; (load "ligature")
 
 (load "server")
 (unless (server-running-p)
@@ -30,5 +30,5 @@
 (load custom-file)
 
 ;; (setq custom-theme-directory "~/.emacs.d/themes")
-;; (use-package ayu-theme)
+;; (use-package 'ayu-theme)
 ;; :config (load-theme 'ayu-dark t)
