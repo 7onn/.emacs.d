@@ -29,7 +29,3 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-
-;; (setq custom-theme-directory "~/.emacs.d/themes")
-;; (use-package 'ayu-theme)
-;; :config (load-theme 'ayu-dark t)
