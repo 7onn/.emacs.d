@@ -34,4 +34,4 @@ C-c C-r|remove unused imports
 C-c i|go to imports
 C-c C-j|jump to definition
 C-c C-d|describe function
-
+C-c C-e|error check
