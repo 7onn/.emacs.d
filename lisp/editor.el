@@ -53,3 +53,7 @@
 ;; sane split window shortcuts
 (global-set-key (kbd "C-x _") 'split-window-below)
 (global-set-key (kbd "C-x |") 'split-window-right)
+
+;; go imports
+(add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
+(add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c i") 'go-goto-imports)))
