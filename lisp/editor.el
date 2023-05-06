@@ -54,7 +54,15 @@
 (global-set-key (kbd "C-x _") 'split-window-below)
 (global-set-key (kbd "C-x |") 'split-window-right)
 
-;; go imports
+;; go 
 (add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 (add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c i") 'go-goto-imports)))
 (add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c C-e") 'go-errcheck)))
+
+;; python
+(unless (package-installed-p 'python-black)
+  (package-refresh-contents)
+  (package-install 'python-black))
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
