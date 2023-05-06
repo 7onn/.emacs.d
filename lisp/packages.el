@@ -50,10 +50,19 @@
   (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
   (add-hook 'go-mode-hook #'lsp-deferred))
 
+(use-package jedi
+  :ensure t)
+
 (use-package python-mode
   :ensure t
   :config
   (add-hook 'python-mode-hook 'python-black-on-save-mode))
+
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable)
+  (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-j") 'elpy-goto-definition))))
 
 (use-package scala-mode
   :ensure t

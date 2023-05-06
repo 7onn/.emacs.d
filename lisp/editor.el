@@ -66,3 +66,5 @@
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
+
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-j") 'elpy-go-to-definition)))
