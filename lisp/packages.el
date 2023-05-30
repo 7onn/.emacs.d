@@ -113,6 +113,9 @@
   :ensure t
   :config (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
+(use-package golden-ratio
+  :ensure t
+  :config (golden-ratio-mode 1))
 
 ;; tools
 
