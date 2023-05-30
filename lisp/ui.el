@@ -30,3 +30,7 @@
 ;; font
 (custom-set-faces
  '(default ((t (:family "Fira Code" :height 120)))))
+
+;; transparency
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
+(add-to-list 'default-frame-alist '(alpha 90 90))
