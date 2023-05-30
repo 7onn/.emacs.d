@@ -12,6 +12,7 @@ el-get
 .cache/
 request/
 elpa/
+elpy/
 url/
 eshell/
 tmp/*
@@ -23,3 +24,5 @@ org-clock-save.el
 *.plstore
 session.*
 custom.el
+.lsp-session-v1
+*.dat

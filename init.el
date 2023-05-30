@@ -21,7 +21,6 @@
 (load "packages")
 (load "editor")
 (load "ui")
-;; (load "ligature")
 
 (load "server")
 (unless (server-running-p)
@@ -29,6 +28,4 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-
-
-
+(put 'downcase-region 'disabled nil)
