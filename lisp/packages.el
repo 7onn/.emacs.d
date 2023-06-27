@@ -85,6 +85,9 @@
 (use-package rego-mode
   :ensure t)
 
+(use-package nix-mode
+  :ensure t
+  :mode "\\.nix\\'")
 
 ;; editing experience
 
