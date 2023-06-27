@@ -25,7 +25,7 @@ This operation might take a few minutes to complete. Patience is a virtue!
 C-x \||split horizontally
 C-x _|split vertically
 C-x w|reveal whitespaces
-
+C-c g|open selected in github
 
 ### Golang
 |Key binding|Action
