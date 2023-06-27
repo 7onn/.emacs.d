@@ -4,7 +4,9 @@
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 
 
-(defun open-file-in-git-remote-with-lines ()
+(require 'url-util)
+
+(defun open-file-in-git-remote ()
   "Open the current file in its Git remote, with selected lines."
   (interactive)
   (let* ((file-path (buffer-file-name))
@@ -16,8 +18,12 @@
          (https-url (replace-regexp-in-string "^git@\\([^:]+\\):" "https://\\1/" remote-url))
          (relative-path (file-relative-name file-path (magit-toplevel)))
          (https-url (concat https-url "/blob/" branch "/" relative-path)))
+    (when (string-equal (downcase (file-name-base file-path)) "readme")
+      (setq https-url (concat https-url "?plain=1")))
     (if (and start-line end-line)
         (setq https-url (concat https-url "#L" (number-to-string start-line) "-L" (number-to-string end-line))))
-    (shell-command (concat "open " https-url))))
 
-(global-set-key (kbd "C-c g") 'open-file-in-git-remote-with-lines)
+    (setq https-url (url-encode-url https-url))
+    (shell-command (concat "open \"" https-url "\""))))
+
+(global-set-key (kbd "C-c g") 'open-file-in-git-remote)
