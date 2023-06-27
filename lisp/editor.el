@@ -68,3 +68,6 @@
 (setq jedi:complete-on-dot t)
 
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-j") 'elpy-go-to-definition)))
+
+;; open content on git remote
+(global-set-key (kbd "C-c g") 'open-file-in-git-remote)
