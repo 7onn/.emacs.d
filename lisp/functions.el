@@ -3,9 +3,6 @@
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 
-
-(require 'url-util)
-
 (defun open-file-in-git-remote ()
   "Open the current file in its Git remote, with selected lines."
   (interactive)
@@ -22,8 +19,6 @@
       (setq https-url (concat https-url "?plain=1")))
     (if (and start-line end-line)
         (setq https-url (concat https-url "#L" (number-to-string start-line) "-L" (number-to-string end-line))))
-
-    (setq https-url (url-encode-url https-url))
     (shell-command (concat "open \"" https-url "\""))))
 
 (global-set-key (kbd "C-c g") 'open-file-in-git-remote)
