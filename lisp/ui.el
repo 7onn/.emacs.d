@@ -29,9 +29,9 @@
 
 ;; font
 (custom-set-faces
- '(default ((t (:family "Fira Code" :height 120)))))
+ '(default ((t (:family "Fira Code" :height 160)))))
 ;; (custom-set-faces
-;;  '(default ((t (:family "Comic Mono" :height 120)))))
+;;  '(default ((t (:family "Comic Mono" :height 160)))))
 
 
 ;; transparency
