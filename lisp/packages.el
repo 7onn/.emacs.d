@@ -139,4 +139,5 @@
             (diminish 'flyspell-mode " ~")
             (diminish 'eldoc-mode " doc")))
 
-
+(use-package vterm
+  :ensure t)
