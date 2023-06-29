@@ -44,17 +44,22 @@
 ;; move to a neighbor window using SHIFT-<arrow-key>
 (windmove-default-keybindings)
 
+;; buffer navigation
+(global-set-key (kbd "C-c j") 'beginning-of-buffer)
+(global-set-key (kbd "C-c k") 'end-of-buffer)
+
 ;; enlarge and shrink windows
-(global-set-key (kbd "C-x <up>")    'shrink-window)
-(global-set-key (kbd "C-x <right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-x <down>")  'enlarge-window)
-(global-set-key (kbd "C-x <left>")  'shrink-window-horizontally)
+;; -- useless alongside golden-ratio
+;; (global-set-key (kbd "C-x <up>")    'shrink-window)
+;; (global-set-key (kbd "C-x <right>") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "C-x <down>")  'enlarge-window)
+;; (global-set-key (kbd "C-x <left>")  'shrink-window-horizontally)
 
 ;; sane split window shortcuts
 (global-set-key (kbd "C-x _") 'split-window-below)
 (global-set-key (kbd "C-x |") 'split-window-right)
 
-;; go 
+;; go
 (add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 (add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c i") 'go-goto-imports)))
 (add-hook 'go-mode-hook (lambda () (local-set-key (kbd "C-c C-e") 'go-errcheck)))
