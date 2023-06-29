@@ -45,8 +45,8 @@
 (windmove-default-keybindings)
 
 ;; buffer navigation
-(global-set-key (kbd "C-c j") 'beginning-of-buffer)
-(global-set-key (kbd "C-c k") 'end-of-buffer)
+(global-set-key (kbd "C-c k") 'beginning-of-buffer)
+(global-set-key (kbd "C-c j") 'end-of-buffer)
 
 ;; enlarge and shrink windows
 ;; -- useless alongside golden-ratio
