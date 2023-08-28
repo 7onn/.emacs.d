@@ -29,10 +29,11 @@
 
 ;; font
 (custom-set-faces
- '(default ((t (:family "Fira Code" :height 160)))))
+ '(default ((t (:family "Fira Code" :height 170)))))
 ;; (custom-set-faces
-;;  '(default ((t (:family "Comic Mono" :height 160)))))
+ ;; '(default ((t (:family "Comic Mono" :height 170)))))
 
 
 ;; transparency
-(set-frame-parameter (selected-frame) 'alpha '(85))
+(dolist (frame (frame-list))
+  (set-frame-parameter frame 'alpha '(85)))

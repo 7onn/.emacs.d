@@ -27,4 +27,4 @@
   (server-start))
 
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+;; (load custom-file)
