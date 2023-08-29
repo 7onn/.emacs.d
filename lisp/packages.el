@@ -10,10 +10,15 @@
 
 ;; package configuration
 
-(use-package dracula-theme
+;; (use-package dracula-theme
+;;   :ensure t
+;;   :config (progn
+;;             (load-theme 'dracula t)))
+
+(use-package panda-theme
   :ensure t
-  :config (progn
-            (load-theme 'dracula t)))
+  :config
+  (load-theme 'panda t))
 
 ;; formatters
 (use-package python-black
